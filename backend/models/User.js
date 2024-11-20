@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     },
     roles : [{
         type : String,
-        default : Employee
+        default : "Employee"
     }],
     active : {
         type : Boolean,
@@ -19,5 +19,4 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const User = new mongoose.Model('User', userSchema);
-module.exports = User;
+module.exports = new mongoose.model('User', userSchema);
